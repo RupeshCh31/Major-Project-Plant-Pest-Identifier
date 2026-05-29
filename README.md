@@ -155,22 +155,22 @@ Pradip Pokhrel Magar
 ## 📸 Application Screenshots
 
 ### Homepage
-![Homepage](static\screenshots/homepage.png)
+![Homepage](static/screenshots/homepage.png)
 
 ### Image Upload Page
-![Image Upload](static\screenshots/image_upload.png)
+![Image Upload](static/screenshots/image_upload.png)
 
 ### Pest History
-![Pest History](static\screenshots/pest_history.png)
+![Pest History](static/screenshots/pest_history.png)
 
 ### Pest Library
-![Pest Library](static\screenshots/pest_library.png)
+![Pest Library](static/screenshots/pest_library.png)
 
 ### Prediction Result
-![Prediction Result](static\screenshots/prediction.png)
+![Prediction Result](static/screenshots/prediction.png)
 
 ### Random Class Pest Image Preview
-![Random Class Pest Image Preview](static\screenshots/random_class_preview.png)
+![Random Class Pest Image Preview](static/screenshots/random_class_preview.png)
 
 
 
