@@ -39,6 +39,8 @@ Provide a user-friendly interface for pest diagnosis.
 
 ✅ Scalable architecture for future enhancements
 
+
+
 🏗️ System Architecture
 Input Image
      │
@@ -56,6 +58,10 @@ Treatment Recommendation
      │
      ▼
 Result Display
+
+
+
+
 🧠 Technologies Used
 Category	Technology
 Programming Language	Python
@@ -65,6 +71,9 @@ Image Processing	OpenCV
 Visualization	Matplotlib
 Development Platform	Google Colab
 Version Control	Git & GitHub
+
+
+
 📂 Dataset
 
 This project utilizes the IP02 / IP102 agricultural pest dataset, which contains images of various insect pest species used for training and evaluation. The dataset provides a large-scale benchmark for pest recognition tasks in agricultural environments.
@@ -88,6 +97,9 @@ Validation and testing
 5. Recommendation Generation
 Pest identification
 Treatment recommendation
+
+
+
 🚀 Installation
 
 Clone the repository:
@@ -106,7 +118,7 @@ Run the project:
 
 python app.py
 
-(Update the command according to your actual implementation.)
+
 
 📈 Future Enhancements
 Mobile application support
@@ -116,6 +128,9 @@ Disease identification module
 Weather-based pest risk prediction
 Treatment effectiveness tracking
 Cloud deployment
+
+
+
 🌍 Impact
 
 This project contributes to:
@@ -125,22 +140,45 @@ Precision Farming
 Sustainable Crop Management
 Early Pest Detection
 Improved Agricultural Productivity
+
+
+
 👨‍💻 Team Members
-Name	Role
-Rupesh Chaudhary	Project Developer
-Team Member 2	Developer
-Team Member 3	Developer
+Name
+Rupesh Chaudhary
+Kyathrin Chemjong
+Roshan Timalsina
+Pradip Pokhrel Magar
 📸 Screenshots
 
-Add screenshots here once the application interface is completed.
 
-screenshots/
-├── home.png
-├── prediction.png
-└── result.png
+## 📸 Application Screenshots
+
+### Homepage
+![Homepage](C:\Users\Acer\Desktop\Plant_pest_Identifier\pest-identifier-app\static\screenshots/homepage.png)
+
+### Image Upload Page
+![Image Upload](C:\Users\Acer\Desktop\Plant_pest_Identifier\pest-identifier-app\static\screenshots/image_upload.png)
+
+### Pest History
+![Pest History](C:\Users\Acer\Desktop\Plant_pest_Identifier\pest-identifier-app\static\screenshots/pest_history.png)
+
+### Pest Library
+![Pest Library](C:\Users\Acer\Desktop\Plant_pest_Identifier\pest-identifier-app\static\screenshots/pest_library.png)
+
+### Prediction Result
+![Prediction Result](C:\Users\Acer\Desktop\Plant_pest_Identifier\pest-identifier-app\static\screenshots/prediction.png)
+
+### Random Class Pest Image Preview
+![Random Class Pest Image Preview](C:\Users\Acer\Desktop\Plant_pest_Identifier\pest-identifier-app\static\screenshots/random_class_preview.png)
+
+
+
 📚 References
 PlantVillage Research Dataset for plant health diagnostics.
 Agricultural pest detection using computer vision and deep learning techniques.
+
+
 ⭐ Support
 
 If you find this project useful:
