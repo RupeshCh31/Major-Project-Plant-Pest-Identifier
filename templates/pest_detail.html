@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ pest.name }} - Pest Details{% endblock %}
+{% block title %}{{ pest.name or pest.pest_name or ('Pest ' ~ pest_id) }} - Pest Details{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
@@ -11,67 +11,96 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
                     <li class="breadcrumb-item"><a href="{{ url_for('pest_library') }}">Pest Library</a></li>
-                    <li class="breadcrumb-item active">{{ pest.name }}</li>
+                    <li class="breadcrumb-item active">{{ pest.name or pest.pest_name or ('Pest ' ~ pest_id) }}</li>
                 </ol>
             </nav>
 
             <div class="card shadow">
                 <div class="card-header bg-success text-white">
                     <h2 class="h4 mb-0">
-                        <i class="fas fa-bug me-2"></i>{{ pest.name }} - Detailed Information
+                        <i class="fas fa-bug me-2"></i>{{ pest.name or pest.pest_name or ('Pest ' ~ pest_id) }} - Detailed Information
                     </h2>
                 </div>
+
                 <div class="card-body p-4">
-                    
                     <div class="row">
-                        <!-- Info Column -->
                         <div class="col-md-12">
                             <h4>Description</h4>
-                            <p>{{ pest.description }}</p>
-                            
-                            <h4 class="mt-4">Scientific Name</h4>
-                            <p><em>{{ pest.scientific_name }}</em></p>
-                            
+                            <p>{{ pest.description or 'No description available.' }}</p>
+
+                            {% if pest.common_name %}
+                            <h4 class="mt-4">Common Name</h4>
+                            <p><em>{{ pest.common_name }}</em></p>
+                            {% endif %}
+
                             <h4 class="mt-4">Symptoms</h4>
+                            {% if pest.symptoms and pest.symptoms|length > 0 %}
                             <ul>
                                 {% for symptom in pest.symptoms %}
                                 <li>{{ symptom }}</li>
                                 {% endfor %}
                             </ul>
-                            
+                            {% else %}
+                            <p class="text-muted">No symptoms listed.</p>
+                            {% endif %}
+
                             <h4 class="mt-4">Crops Affected</h4>
+                            {% if pest.crops_affected and pest.crops_affected|length > 0 %}
                             <div>
                                 {% for crop in pest.crops_affected %}
-                                <span class="badge bg-success me-2 p-2">{{ crop }}</span>
+                                <span class="badge bg-success me-2 mb-2 p-2">{{ crop }}</span>
                                 {% endfor %}
                             </div>
+                            {% else %}
+                            <p class="text-muted">No crops listed.</p>
+                            {% endif %}
                         </div>
                     </div>
-                    
+
                     <!-- Treatments Section -->
                     <h4 class="mt-4">Treatment Recommendations</h4>
                     <div class="row">
-                        {% for treatment in pest.treatments %}
                         <div class="col-md-6 mb-3">
                             <div class="card h-100">
-                                <div class="card-header 
-                                    {% if treatment.type == 'organic' %}bg-success text-white
-                                    {% elif treatment.type == 'chemical' %}bg-warning
-                                    {% else %}bg-info text-white{% endif %}">
-                                    <i class="fas fa-{% if treatment.type == 'organic' %}leaf
-                                                {% elif treatment.type == 'chemical' %}flask
-                                                {% else %}dna{% endif %} me-2"></i>
-                                    {{ treatment.type|title }}
+                                <div class="card-header bg-success text-white">
+                                    <i class="fas fa-leaf me-2"></i>Organic Treatment
                                 </div>
                                 <div class="card-body">
-                                    <h5>{{ treatment.method }}</h5>
-                                    <p>{{ treatment.instructions }}</p>
+                                    {% set organic_steps = pest.treatments.organic if pest.treatments and pest.treatments.organic else [] %}
+                                    {% if organic_steps|length > 0 %}
+                                    <ol class="mb-0">
+                                        {% for step in organic_steps %}
+                                        <li>{{ step }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    {% else %}
+                                    <p class="mb-0 text-muted">No organic treatment steps listed.</p>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
+
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header bg-warning">
+                                    <i class="fas fa-flask me-2"></i>Chemical Treatment
+                                </div>
+                                <div class="card-body">
+                                    {% set chemical_steps = pest.treatments.chemical if pest.treatments and pest.treatments.chemical else [] %}
+                                    {% if chemical_steps|length > 0 %}
+                                    <ol class="mb-0">
+                                        {% for step in chemical_steps %}
+                                        <li>{{ step }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    {% else %}
+                                    <p class="mb-0 text-muted">No chemical treatment steps listed.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
+
                     <!-- Back Button -->
                     <div class="text-center mt-4">
                         <a href="{{ url_for('pest_library') }}" class="btn btn-success">

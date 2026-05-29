@@ -6,10 +6,12 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-10 mx-auto">
-            <!-- Success Message -->
             <div class="alert alert-success text-center mb-4">
                 <i class="fas fa-check-circle fa-2x mb-3"></i>
                 <h4>Pest Identified Successfully!</h4>
+                {% if confidence is not none %}
+                <p class="mb-0">Confidence: <strong>{{ confidence }}%</strong></p>
+                {% endif %}
             </div>
 
             <div class="card shadow">
@@ -18,101 +20,128 @@
                         <i class="fas fa-bug me-2"></i>Identification Results
                     </h2>
                 </div>
+
                 <div class="card-body p-4">
-                    
-                    <!-- Uploaded Image -->
                     {% if image %}
                     <div class="text-center mb-4">
-                        <img src="{{ url_for('static', filename='uploads/' + image) }}" 
-                             class="img-fluid rounded shadow" 
+                        <img src="{{ url_for('static', filename='uploads/' + image) }}"
+                             class="img-fluid rounded shadow"
                              style="max-height: 300px;"
                              alt="Uploaded pest image">
                     </div>
                     {% endif %}
-                    
-                    <!-- Pest Information -->
+
                     <div class="row mb-4">
                         <div class="col-md-8 mx-auto text-center">
-                            <h3 class="display-6 text-success">{{ pest.name }}</h3>
-                            <p class="text-muted"><em>{{ pest.scientific_name }}</em></p>
+                            <h3 class="display-6 text-success">{{ pest.pest_name or 'Unknown Pest' }}</h3>
                         </div>
                     </div>
-                    
-                    <!-- Quick Info Cards -->
+
                     <div class="row mb-4">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="card bg-light h-100">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <i class="fas fa-info-circle text-success me-2"></i>Description
                                     </h5>
-                                    <p class="card-text">{{ pest.description }}</p>
+                                    <p class="card-text">{{ pest.description or 'No description available.' }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+
+                        <div class="col-md-6 mb-3">
                             <div class="card bg-light h-100">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <i class="fas fa-exclamation-triangle text-warning me-2"></i>Symptoms
                                     </h5>
+                                    {% if pest.symptoms and pest.symptoms|length > 0 %}
                                     <ul class="mb-0">
                                         {% for symptom in pest.symptoms %}
                                         <li>{{ symptom }}</li>
                                         {% endfor %}
                                     </ul>
+                                    {% else %}
+                                    <p class="mb-0 text-muted">No symptoms listed.</p>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Crops Affected -->
+
                     <div class="card bg-light mb-4">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <i class="fas fa-seedling text-success me-2"></i>Crops Affected
                             </h5>
+                            {% if pest.crops_affected and pest.crops_affected|length > 0 %}
                             <div>
                                 {% for crop in pest.crops_affected %}
-                                <span class="badge bg-success me-2 p-2">{{ crop }}</span>
+                                <span class="badge bg-success me-2 mb-2 p-2">{{ crop }}</span>
                                 {% endfor %}
                             </div>
+                            {% else %}
+                            <p class="mb-0 text-muted">No specific crops listed.</p>
+                            {% endif %}
                         </div>
                     </div>
-                    
-                    <!-- Treatment Recommendations (NO PREVENTION) -->
+
                     <h4 class="mb-3">
                         <i class="fas fa-prescription-bottle text-success me-2"></i>
                         Treatment Recommendations
                     </h4>
-                    
+
                     <div class="row mb-4">
-                        {% for treatment in pest.treatments %}
                         <div class="col-md-6 mb-3">
-                            <div class="card h-100">
-                                <div class="card-header 
-                                    {% if treatment.type == 'organic' %}bg-success text-white
-                                    {% elif treatment.type == 'chemical' %}bg-warning
-                                    {% else %}bg-info text-white{% endif %}">
-                                    <i class="fas fa-{% if treatment.type == 'organic' %}leaf
-                                                {% elif treatment.type == 'chemical' %}flask
-                                                {% else %}dna{% endif %} me-2"></i>
-                                    {{ treatment.type|title }} Treatment
+                            <div class="card h-100 treatment-card organic">
+                                <div class="card-header bg-success text-white">
+                                    <i class="fas fa-leaf me-2"></i>Organic Treatment
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ treatment.method }}</h5>
-                                    <p class="card-text">{{ treatment.instructions }}</p>
-                                    <button class="btn btn-sm btn-outline-success" 
-                                            onclick="copyToClipboard('{{ treatment.instructions }}', 'treatment-{{ loop.index }}')">
+                                    {% set organic_steps = pest.treatments.organic if pest.treatments and pest.treatments.organic else [] %}
+                                    {% if organic_steps|length > 0 %}
+                                    <ol class="mb-3" id="organic-copy">
+                                        {% for step in organic_steps %}
+                                        <li>{{ step }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    <button class="btn btn-sm btn-outline-success"
+                                            onclick="copyToClipboard(`{{ organic_steps | join('\n') }}`, 'organic-copy')">
                                         <i class="fas fa-copy me-1"></i>Copy Instructions
                                     </button>
+                                    {% else %}
+                                    <p class="mb-0 text-muted">No organic treatment steps listed.</p>
+                                    {% endif %}
+
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
+
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100 treatment-card chemical">
+                                <div class="card-header bg-warning">
+                                    <i class="fas fa-flask me-2"></i>Chemical Treatment
+                                </div>
+                                <div class="card-body">
+                                    {% set chemical_steps = pest.treatments.chemical if pest.treatments and pest.treatments.chemical else [] %}
+                                    {% if chemical_steps|length > 0 %}
+                                    <ol class="mb-3" id="chemical-copy">
+                                        {% for step in chemical_steps %}
+                                        <li>{{ step }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    <button class="btn btn-sm btn-outline-warning"
+                                            onclick="copyToClipboard(`{{ chemical_steps | join('\n') }}`, 'chemical-copy')">
+                                        <i class="fas fa-copy me-1"></i>Copy Instructions
+                                    </button>
+                                    {% else %}
+                                    <p class="mb-0 text-muted">No chemical treatment steps listed.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Action Buttons -->
+
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                         <a href="{{ url_for('identify') }}" class="btn btn-success me-md-2">
                             <i class="fas fa-camera me-2"></i>Identify Another

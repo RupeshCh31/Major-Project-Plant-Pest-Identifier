@@ -13,7 +13,7 @@
             </h1>
             <p class="lead mb-5 text-muted">
                 Identify crop pests quickly and get personalized treatment recommendations 
-                using organic, chemical, and biological methods
+                using organic and chemical methods
             </p>
             <a href="{{ url_for('identify') }}" class="btn btn-success btn-lg px-5 py-3 mb-5">
                 <i class="fas fa-camera me-2"></i>Start Identification
@@ -64,82 +64,13 @@
                     </div>
                     <h3 class="h5">3. Get Treatments</h3>
                     <p class="card-text text-muted">
-                        Receive organic, chemical, and biological treatment recommendations
+                        Receive organic and chemical treatment recommendations
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Common Pests Section -->
-    <div class="row mt-5">
-        <div class="col-12 text-center mb-4">
-            <h2 class="display-6">Common Pests We Identify</h2>
-            <p class="text-muted">Click on any pest to learn more</p>
-        </div>
-        
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card pest-card" onclick="location.href='{{ url_for('pest_detail', pest_id='aphid') }}'">
-                <div class="card-body text-center">
-                    <i class="fas fa-bug fa-3x text-success mb-3"></i>
-                    <h5 class="card-title">Aphids</h5>
-                    <p class="small text-muted">Vegetables, Fruits</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card pest-card" onclick="location.href='{{ url_for('pest_detail', pest_id='whitefly') }}'">
-                <div class="card-body text-center">
-                    <i class="fas fa-bug fa-3x text-success mb-3"></i>
-                    <h5 class="card-title">Whiteflies</h5>
-                    <p class="small text-muted">Tomatoes, Peppers</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card pest-card" onclick="location.href='{{ url_for('pest_detail', pest_id='caterpillar') }}'">
-                <div class="card-body text-center">
-                    <i class="fas fa-bug fa-3x text-success mb-3"></i>
-                    <h5 class="card-title">Caterpillars</h5>
-                    <p class="small text-muted">Leafy greens, Cabbage</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card pest-card" onclick="location.href='{{ url_for('pest_detail', pest_id='spider_mite') }}'">
-                <div class="card-body text-center">
-                    <i class="fas fa-bug fa-3x text-success mb-3"></i>
-                    <h5 class="card-title">Spider Mites</h5>
-                    <p class="small text-muted">Strawberries, Beans</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Stats Section -->
-    <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-            <div class="stat-card">
-                <h3>50+</h3>
-                <p>Pest Species</p>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="stat-card">
-                <h3>1000+</h3>
-                <p>Farmers Helped</p>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="stat-card">
-                <h3>95%</h3>
-                <p>Accuracy Rate</p>
-            </div>
-        </div>
-    </div>
 
     <!-- Call to Action -->
     <div class="row mt-5">

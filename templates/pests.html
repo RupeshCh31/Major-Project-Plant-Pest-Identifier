@@ -32,20 +32,24 @@
                 {% if pest_id != 'non-pest' %}
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow">
+                        <img 
+                            src="{{ url_for('static', filename='pest/' ~ pest_id ~ '.jpg') }}" 
+                            class="card-img-top"
+                            alt="{{ pest.pest_name }}"
+                            style="height: 220px; object-fit: contain; background-color: #f8f9fa;"
+                        >
                         <div class="card-body">
-                            <div class="text-center mb-3">
-                                <i class="fas fa-bug fa-3x text-success"></i>
-                            </div>
-                            <h5 class="card-title text-success text-center">{{ pest.name }}</h5>
-                            <p class="card-subtitle text-muted text-center mb-3"><em>{{ pest.scientific_name }}</em></p>
-                            <p class="card-text">{{ pest.description[:100] if pest.description else 'No description available' }}...</p>
                             
-                            <div class="mb-3">
-                                <strong>Crops:</strong><br>
-                                {% for crop in pest.crops_affected[:3] %}
-                                <span class="badge bg-light text-dark me-1">{{ crop }}</span>
-                                {% endfor %}
+                            <h5 class="card-title text-success text-center">{{ pest.pest_name }}</h5>
+                            
+                            
+                            <div class="mb-3 text-center">
+                                <strong>Common Name:</strong><br>
+                                <span class="badge bg-success me-2 mb-2 p-2 fs-6">
+                                    {{ pest.common_name if pest.common_name else 'Not available' }}
+                                </span>
                             </div>
+
                             
                             <a href="{{ url_for('pest_detail', pest_id=pest_id) }}" class="btn btn-success w-100">
                                 <i class="fas fa-info-circle me-2"></i>View Details

@@ -1,0 +1,452 @@
+{
+  "1": {
+    "pest_name": "Dolycoris baccarum",
+    "common_name": "Hairy Shield Bug",
+    "description": "A hairy shield bug with a brownish body that feeds on plant sap and damages fruits and crops.",
+    "crops_affected": ["Fruits", "Vegetables", "Berry plants"],
+    "symptoms": ["Discolored or deformed fruits", "Leaf damage", "Reduced crop quality"],
+    "treatments": {
+      "organic": ["Remove weeds and debris", "Encourage natural predators", "Use neem oil sprays"],
+      "chemical": ["Apply Cyfluthrin", "Use Lambda-Cyhalothrin", "Spray Bifenthrin"]
+    }
+  },
+  "2": {
+    "pest_name": "Lycorma delicatula",
+    "common_name": "Spotted Lanternfly",
+    "description": "An invasive spotted lanternfly that feeds on plant sap and weakens trees.",
+    "crops_affected": ["Grapes", "Fruit trees", "Hardwood trees"],
+    "symptoms": ["Sap leakage", "Sooty mold growth", "Wilting or dieback"],
+    "treatments": {
+      "organic": ["Scrape egg masses", "Use sticky tree bands", "Monitor infestation regularly"],
+      "chemical": ["Apply Imidacloprid", "Use Dinotefuran", "Spray Bifenthrin"]
+    }
+  },
+  "3": {
+    "pest_name": "Eurydema dominulus",
+    "common_name": "Painted Bug",
+    "description": "A red and black shield bug that feeds on plant sap and damages leafy crops.",
+    "crops_affected": ["Beans", "Spinach", "Cole crops"],
+    "symptoms": ["Yellow spots on leaves", "Stunted growth", "Leaf wilting"],
+    "treatments": {
+      "organic": ["Maintain field sanitation", "Use netting barriers", "Encourage predators"],
+      "chemical": ["Apply Cyfluthrin", "Use Lambda-Cyhalothrin", "Spray Bifenthrin"]
+    }
+  },
+  "4": {
+    "pest_name": "Pieris rapae",
+    "common_name": "Cabbage White Butterfly",
+    "description": "A cabbage white butterfly whose larvae feed on cruciferous plants.",
+    "crops_affected": ["Cabbage", "Broccoli", "Cauliflower"],
+    "symptoms": ["Holes in leaves", "Presence of green caterpillars", "Reduced plant growth"],
+    "treatments": {
+      "organic": ["Use row covers", "Handpick caterpillars", "Apply neem oil or Bt"],
+      "chemical": ["Apply Spinosad", "Use Permethrin", "Spray Pyrethroids"]
+    }
+  },
+  "5": {
+    "pest_name": "Halyomorpha halys",
+    "common_name": "Brown Marmorated Stink Bug",
+    "description": "A brown stink bug that damages crops and invades homes.",
+    "crops_affected": ["Fruits", "Vegetables", "Field crops"],
+    "symptoms": ["Spotted or damaged fruits", "Foul odor", "Leaf injury"],
+    "treatments": {
+      "organic": ["Seal entry points", "Remove nearby vegetation", "Use netting"],
+      "chemical": ["Apply Bifenthrin", "Use Cyfluthrin", "Spray Pyrethroids"]
+    }
+  },
+  "6": {
+    "pest_name": "Spilosoma obliqua",
+    "common_name": "Jute Hairy Caterpillar",
+    "description": "A moth species whose caterpillars feed on plant leaves and cause defoliation.",
+    "crops_affected": ["Vegetables", "Field crops", "Ornamental plants"],
+    "symptoms": ["Leaf damage", "Defoliation", "Visible caterpillars"],
+    "treatments": {
+      "organic": ["Remove weeds", "Handpick larvae", "Encourage predators"],
+      "chemical": ["Apply Spinosad", "Use Bifenthrin", "Spray Carbamates"]
+    }
+  },
+  "7": {
+    "pest_name": "Graphosoma rubrolineata",
+    "common_name": "Striped Shield Bug",
+    "description": "A striped shield bug that feeds on plant sap in gardens and fields.",
+    "crops_affected": ["Herbs", "Vegetables", "Mint family plants"],
+    "symptoms": ["Leaf discoloration", "Weak plant growth", "Sap loss"],
+    "treatments": {
+      "organic": ["Reduce plant debris", "Encourage predators"],
+      "chemical": ["Apply Bifenthrin", "Use Organophosphates", "Spray Pyrethroids"]
+    }
+  },
+  "8": {
+    "pest_name": "Luperomorpha suturalis",
+    "common_name": "Leaf Beetle",
+    "description": "A flea beetle that feeds on leaves of passionflower plants.",
+    "crops_affected": ["Passionflower", "Ornamental plants"],
+    "symptoms": ["Small holes in leaves", "Leaf skeletonization", "Reduced plant vigor"],
+    "treatments": {
+      "organic": ["Use row covers", "Remove host plants", "Apply neem oil"],
+      "chemical": ["Apply Bifenthrin", "Use Pyrethroids", "Spray Organophosphates"]
+    }
+  },
+  "9": {
+    "pest_name": "Leptocorisa acuta",
+    "common_name": "Rice Ear Head Bug",
+    "description": "A rice seed bug that feeds on developing grains and reduces yield.",
+    "crops_affected": ["Rice"],
+    "symptoms": ["Empty grains", "Poor grain quality", "Reduced yield"],
+    "treatments": {
+      "organic": ["Practice crop rotation", "Manage water levels", "Encourage predators"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin"]
+    }
+  },
+  "10": {
+    "pest_name": "Sesamia inferens",
+    "common_name": "Asiatic Pink Stem Borer",
+    "description": "A stem borer moth whose larvae damage stems of cereal crops.",
+    "crops_affected": ["Maize", "Rice", "Sorghum"],
+    "symptoms": ["Dead hearts", "Stem tunneling", "Reduced crop growth"],
+    "treatments": {
+      "organic": ["Remove crop residues", "Use trap crops", "Encourage natural enemies"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Organophosphates"]
+    }
+  },
+  "11": {
+    "pest_name": "Cicadella viridis",
+    "common_name": "Small Green Leafhopper",
+    "description": "A small green leafhopper that feeds on plant sap and weakens crops.",
+    "crops_affected": ["Rice", "Grasses", "Vegetables"],
+    "symptoms": ["Yellowing leaves", "Leaf stippling", "Reduced plant vigor"],
+    "treatments": {
+      "organic": ["Remove weeds and alternate hosts", "Use net barriers", "Maintain plant health"],
+      "chemical": ["Apply Bifenthrin", "Use Carbamates", "Spray Neonicotinoids"]
+    }
+  },
+  "12": {
+    "pest_name": "Callitettix versicolor",
+    "common_name": "No common name",
+    "description": "A leafhopper species that feeds on plant sap and can spread plant diseases.",
+    "crops_affected": ["Rice", "Vegetables", "Grasses"],
+    "symptoms": ["Leaf yellowing", "Stunted growth", "Disease transmission"],
+    "treatments": {
+      "organic": ["Remove weeds", "Encourage predators", "Use mesh covers"],
+      "chemical": ["Apply Bifenthrin", "Use Carbamates", "Spray Neonicotinoids"]
+    }
+  },
+  "13": {
+    "pest_name": "Scotinophara lurida",
+    "common_name": "Rice Black Bug",
+    "description": "A rice pest that damages leaves by feeding and reducing plant growth.",
+    "crops_affected": ["Rice"],
+    "symptoms": ["Leaf rolling", "Leaf damage", "Reduced yield"],
+    "treatments": {
+      "organic": ["Maintain field hygiene", "Encourage predators", "Monitor crops regularly"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Apply Bt"]
+    }
+  },
+  "14": {
+    "pest_name": "Cletus punctiger",
+    "common_name": "No common name",
+    "description": "A stink bug that feeds on plant sap and damages crops.",
+    "crops_affected": ["Vegetables", "Fruits", "Field crops"],
+    "symptoms": ["Wilting", "Deformed fruits", "Discoloration"],
+    "treatments": {
+      "organic": ["Remove weeds", "Use crop rotation", "Install barriers"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Neonicotinoids"]
+    }
+  },
+  "15": {
+    "pest_name": "Nezara viridula",
+    "common_name": "Southern Green Stink Bug",
+    "description": "A green stink bug that damages crops by sucking sap from fruits and leaves.",
+    "crops_affected": ["Vegetables", "Fruits", "Soybean"],
+    "symptoms": ["Blemished fruits", "Reduced yield", "Deformed seeds"],
+    "treatments": {
+      "organic": ["Remove crop residues", "Control weeds", "Practice crop rotation"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Neonicotinoids"]
+    }
+  },
+  "16": {
+    "pest_name": "Dicladispa armigera",
+    "common_name": "Rice Hispa Beetle",
+    "description": "A rice hispa beetle that damages leaves by scraping their surface.",
+    "crops_affected": ["Rice"],
+    "symptoms": ["White streaks on leaves", "Leaf drying", "Reduced plant growth"],
+    "treatments": {
+      "organic": ["Maintain field hygiene", "Encourage predators", "Early planting"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Neonicotinoids"]
+    }
+  },
+  "17": {
+    "pest_name": "Riptortus pedestris",
+    "common_name": "Bean Bug",
+    "description": "A bean bug that feeds on seeds and pods of legume crops.",
+    "crops_affected": ["Soybean", "Beans", "Legumes"],
+    "symptoms": ["Damaged seeds", "Pod deformation", "Yield loss"],
+    "treatments": {
+      "organic": ["Remove crop residues", "Practice crop rotation", "Control weeds"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Neonicotinoids"]
+    }
+  },
+  "18": {
+    "pest_name": "Maruca testulalis",
+    "common_name": "Maruca Pod Borer",
+    "description": "A pod borer moth whose larvae damage legume pods and seeds.",
+    "crops_affected": ["Pigeon pea", "Cowpea", "Mung bean"],
+    "symptoms": ["Holes in pods", "Seed damage", "Reduced yield"],
+    "treatments": {
+      "organic": ["Remove crop residues", "Monitor crops", "Harvest early"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Neonicotinoids"]
+    }
+  },
+  "19": {
+    "pest_name": "Chauliops fallax",
+    "common_name": "No common name",
+    "description": "A small bug that infests bean plants and reduces crop productivity.",
+    "crops_affected": ["Soybean", "Beans"],
+    "symptoms": ["Leaf damage", "Reduced growth", "Low yield"],
+    "treatments": {
+      "organic": ["Monitor early infestation", "Maintain field hygiene", "Encourage predators"],
+      "chemical": ["Apply Chlorpyrifos", "Use Cypermethrin", "Spray Dimethoate"]
+    }
+  },
+  "20": {
+    "pest_name": "Chilo suppressalis",
+    "common_name": "Striped Rice Stem Borer",
+    "description": "A stem borer that damages rice by boring into stems.",
+    "crops_affected": ["Rice", "Maize", "Grasses"],
+    "symptoms": ["Dead hearts", "Whiteheads", "Stem damage"],
+    "treatments": {
+      "organic": ["Remove crop residues", "Practice crop rotation", "Encourage predators"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Apply Chlorpyrifos"]
+    }
+  },
+  "21": {
+    "pest_name": "Stollia ventralis",
+    "common_name": "No common name",
+    "description": "A small green shield bug that feeds on plant sap causing damage to leaves and fruits.",
+    "crops_affected": ["Vegetables", "Fruits", "Field crops"],
+    "symptoms": ["Leaf discoloration", "Wilting", "Deformed fruits"],
+    "treatments": {
+      "organic": ["Remove weeds and debris", "Encourage natural predators", "Use traps or barriers"],
+      "chemical": ["Apply Cypermethrin", "Use Deltamethrin", "Spray Neonicotinoids"]
+    }
+  },
+  "22": {
+    "pest_name": "Nilaparvata lugens",
+    "common_name": "Brown Planthopper",
+    "description": "A brown planthopper that damages rice by sucking sap and causing hopper burn.",
+    "crops_affected": ["Rice"],
+    "symptoms": ["Yellowing leaves", "Hopper burn", "Plant death"],
+    "treatments": {
+      "organic": ["Use resistant varieties", "Maintain water management", "Encourage predators"],
+      "chemical": ["Apply Imidacloprid", "Use Chlorpyrifos", "Spray Fipronil"]
+    }
+  },
+  "23": {
+    "pest_name": "Diostrombus politus",
+    "common_name": "No common name",
+    "description": "A broad-headed bug that damages cotton and cereal crops by feeding on seeds.",
+    "crops_affected": ["Cotton", "Maize", "Sorghum", "Rice"],
+    "symptoms": ["Damaged seeds", "Reduced yield", "Poor crop quality"],
+    "treatments": {
+      "organic": ["Practice crop rotation", "Use traps and netting", "Encourage natural enemies"],
+      "chemical": ["Apply Organophosphates", "Use Pyrethroids", "Spray Neonicotinoids"]
+    }
+  },
+  "24": {
+    "pest_name": "Phyllotreta striolata",
+    "common_name": "Striped Flea Beetle",
+    "description": "A flea beetle that damages brassica crops by feeding on leaves and roots.",
+    "crops_affected": ["Cabbage", "Radish", "Mustard", "Cauliflower"],
+    "symptoms": ["Shot holes in leaves", "Leaf damage", "Reduced growth"],
+    "treatments": {
+      "organic": ["Use crop rotation", "Apply neem oil", "Use net covers"],
+      "chemical": ["Apply Carbaryl", "Use Imidacloprid", "Apply Pyrethroids"]
+    }
+  },
+  "25": {
+    "pest_name": "Aulacophora indica",
+    "common_name": "Pumpkin Beetle",
+    "description": "A cucurbit beetle that feeds on leaves and flowers of cucurbit crops.",
+    "crops_affected": ["Cucumber", "Pumpkin", "Melon", "Gourd"],
+    "symptoms": ["Leaf holes", "Flower damage", "Reduced yield"],
+    "treatments": {
+      "organic": ["Handpick beetles", "Practice crop rotation", "Encourage predators"],
+      "chemical": ["Apply Carbaryl", "Use Imidacloprid", "Apply Pyrethroids"]
+    }
+  },
+  "26": {
+    "pest_name": "Laodelphax striatellus",
+    "common_name": "Small Brown Planthopper",
+    "description": "A small brown planthopper that damages crops and spreads viral diseases.",
+    "crops_affected": ["Rice", "Wheat", "Maize", "Barley"],
+    "symptoms": ["Yellowing", "Stunted growth", "Disease symptoms"],
+    "treatments": {
+      "organic": ["Remove weeds", "Use resistant varieties", "Encourage predators"],
+      "chemical": ["Apply Imidacloprid", "Use Carbaryl", "Apply Triflumezopyrim"]
+    }
+  },
+  "27": {
+    "pest_name": "Ceroplastes ceriferus",
+    "common_name": "Indian Wax Scale",
+    "description": "A wax scale insect that feeds on plant sap and weakens plants.",
+    "crops_affected": ["Shrubs", "Ornamental plants", "Fruit trees"],
+    "symptoms": ["Sticky honeydew", "Sooty mold", "Leaf yellowing"],
+    "treatments": {
+      "organic": ["Remove infested parts", "Encourage predators", "Use neem oil"],
+      "chemical": ["Apply Carbaryl", "Use Imidacloprid"]
+    }
+  },
+  "28": {
+    "pest_name": "Corythucha marmorata",
+    "common_name": "Chrysanthemum Lace Bug",
+    "description": "A lace bug that damages ornamental plants by sucking sap from leaves.",
+    "crops_affected": ["Chrysanthemum", "Sunflower", "Aster"],
+    "symptoms": ["Leaf discoloration", "Spots on leaves", "Reduced vigor"],
+    "treatments": {
+      "organic": ["Remove infected leaves", "Encourage predators", "Maintain sanitation"],
+      "chemical": ["Apply Carbaryl", "Use Imidacloprid"]
+    }
+  },
+  "29": {
+    "pest_name": "Dryocosmus kuriphilus",
+    "common_name": "Chestnut Gall Wasp",
+    "description": "A gall wasp that forms galls on chestnut trees and reduces yield.",
+    "crops_affected": ["Chestnut"],
+    "symptoms": ["Gall formation", "Reduced growth", "Poor fruit yield"],
+    "treatments": {
+      "organic": ["Prune infected parts", "Use resistant varieties", "Encourage biological control"],
+      "chemical": ["Apply Imidacloprid", "Use Acetamiprid", "Spray Bifenthrin"]
+    }
+  },
+  "30": {
+    "pest_name": "Porthesia taiwana",
+    "common_name": "Brown-tail Moth",
+    "description": "A moth whose caterpillars damage leaves and flowers of plants.",
+    "crops_affected": ["Chrysanthemum", "Sunflower", "Ornamental plants"],
+    "symptoms": ["Leaf defoliation", "Flower damage", "Reduced plant growth"],
+    "treatments": {
+      "organic": ["Remove egg masses", "Encourage predators", "Use Bt"],
+      "chemical": ["Apply Permethrin", "Use Cypermethrin", "Spray Pyrethroids"]
+    }
+  },
+  "31": {
+    "pest_name": "Chromatomyia horticola",
+    "common_name": "Garden Pea Leaf Miner",
+    "description": "A leaf-mining fly that damages crops by creating mines inside leaves, reducing photosynthesis and plant growth.",
+    "crops_affected": ["peas", "chrysanthemum", "sunflower"],
+    "symptoms": ["zig-zag or blotchy leaf mines", "yellowing leaves", "reduced plant growth"],
+    "treatments": {
+      "organic": ["Remove and destroy infected leaves","Encourage natural predators like parasitic wasps","Maintain field sanitation"],
+      "chemical": ["Apply Spinosad spray","Use Abamectin during larval stage","Apply Imidacloprid as soil or foliar treatment"]
+    }
+  },
+  "32": {
+    "pest_name": "Iscadia inexacta",
+    "common_name": "No common name",
+    "description": "A moth species whose larvae feed on leaves and flowers, causing significant crop damage.",
+    "crops_affected": ["euphorbiaceae plants", "guava", "ornamental plants"],
+    "symptoms": ["chewed leaves", "damaged fruits", "presence of caterpillars"],
+    "treatments": {
+      "organic": ["Remove infested plant parts","Use pheromone traps","Encourage parasitic wasps"],
+      "chemical": ["Apply Methoxyfenozide","Use Bacillus thuringiensis (Bt)","Spray Cypermethrin if infestation is severe"]
+    }
+  },
+  "33": {
+    "pest_name": "Plutella xylostella",
+    "common_name": "Diamondback Moth",
+    "description": "A major pest of cruciferous crops, commonly known as the diamondback moth, damaging leaves and buds.",
+    "crops_affected": ["cabbage", "cauliflower", "broccoli", "kale"],
+    "symptoms": ["holes in leaves", "leaf skeletonization", "reduced yield"],
+    "treatments": {
+      "organic": ["Use crop rotation","Introduce natural predators","Install pheromone traps"],
+      "chemical": ["Apply Bacillus thuringiensis (Bt)","Use Spinosad spray","Apply Cypermethrin if necessary"]
+    }
+  },
+  "34": {
+    "pest_name": "Empoasca flavescens",
+    "common_name": "Green Leafhopper",
+    "description": "A sap-sucking leafhopper that weakens plants and causes leaf discoloration.",
+    "crops_affected": ["millets", "sorghum", "rice"],
+    "symptoms": ["yellowing leaves", "leaf curling", "wilting"],
+    "treatments": {
+      "organic": ["Remove weeds and maintain hygiene","Encourage predators like ladybugs","Use netting or row covers"],
+      "chemical": ["Apply Imidacloprid","Use Neem oil spray","Apply Cypermethrin if infestation increases"]
+    }
+  },
+  "35": {
+    "pest_name": "Dolerus tritici",
+    "common_name": "Wheat Sawfly",
+    "description": "A sawfly pest that feeds on cereal crops, damaging leaves and reducing plant growth.",
+    "crops_affected": ["wheat", "barley", "oats"],
+    "symptoms": ["holes in leaves", "reduced plant vigor", "presence of larvae"],
+    "treatments": {
+      "organic": ["Practice crop rotation","Encourage parasitic wasps","Destroy crop residues"],
+      "chemical": ["Use Imidacloprid as seed treatment","Apply systemic insecticides carefully","Use integrated pest management practices"]
+    }
+  },
+  "36": {
+    "pest_name": "Spodoptera litura",
+    "common_name": "Cotton Leafworm",
+    "description": "A destructive caterpillar pest that feeds on leaves and buds of many crops.",
+    "crops_affected": ["cotton", "tobacco", "vegetables"],
+    "symptoms": ["large holes in leaves", "defoliation", "presence of larvae"],
+    "treatments": {
+      "organic": ["Remove crop residues","Use light traps and netting","Encourage natural predators"],
+      "chemical": ["Apply Bacillus thuringiensis (Bt)","Use Bifenthrin spray","Apply Chlorpyrifos if needed"]
+    }
+  },
+  "37": {
+    "pest_name": "Corythucha ciliata",
+    "common_name": "Sycamore Lace Bug",
+    "description": "A lace bug that feeds on plant sap, mainly affecting trees like sycamore.",
+    "crops_affected": ["sycamore trees", "ornamental plants"],
+    "symptoms": ["yellow spotting on leaves", "leaf discoloration", "reduced plant health"],
+    "treatments": {
+      "organic": ["Prune infected leaves","Encourage predators like ladybugs","Maintain plant health"],
+      "chemical": ["Apply Neem oil","Use insecticidal soap","Apply Bifenthrin if severe"]
+    }
+  },
+  "38": {
+    "pest_name": "Bemisia tabaci",
+    "common_name": "Sweet Potato Whitefly",
+    "description": "A whitefly pest that sucks plant sap and transmits viral diseases.",
+    "crops_affected": ["cotton", "tomato", "vegetables"],
+    "symptoms": ["yellowing leaves", "sticky honeydew", "sooty mold growth"],
+    "treatments": {
+      "organic": ["Use sticky traps","Encourage natural enemies","Remove infected plants"],
+      "chemical": ["Apply Imidacloprid","Use Pyriproxyfen","Apply Bifenthrin if required"]
+    }
+  },
+  "39": {
+    "pest_name": "Ceutorhynchus asper",
+    "common_name": "No common name",
+    "description": "A stem weevil that damages plants by boring into stems and roots.",
+    "crops_affected": ["rapeseed", "cabbage", "mustard"],
+    "symptoms": ["stem tunneling", "galls formation", "reduced plant vigor"],
+    "treatments": {
+      "organic": ["Practice crop rotation","Remove plant debris","Encourage parasitoids"],
+      "chemical": ["Apply Lambda-cyhalothrin","Use Thiamethoxam","Apply Chlorpyrifos spray"]
+    }
+  },
+  "40": {
+    "pest_name": "Strongyllodes variegatus",
+    "common_name": "No common name",
+    "description": "A beetle pest that feeds on leaves, flowers, and buds, reducing crop yield.",
+    "crops_affected": ["cabbage", "mustard", "oilseed rape"],
+    "symptoms": ["holes in leaves", "damaged buds", "reduced growth"],
+    "treatments": {
+      "organic": ["Use crop rotation","Handpick beetles","Encourage natural predators"],
+      "chemical": ["Apply Carbaryl","Use Imidacloprid","Apply Metarhizium anisopliae"]
+    }
+  },
+  "non-pest": {
+        "pest_name": "Non-pest",
+        "description": "No harmful pest detected.",
+        "crops_affected": [],
+        "symptoms": [],
+        "treatments": {
+            "organic": ["No treatment needed.", "Monitor plant health.", "Keep field clean."],
+            "chemical": ["No pesticide recommended.", "Avoid unnecessary sprays.", "Consult expert if unsure."]
+        }
+    }
+}

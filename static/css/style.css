@@ -138,7 +138,7 @@ footer {
 /* Treatment Cards */
 .treatment-card {
     border-left: 4px solid;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 .treatment-card.organic {
@@ -149,8 +149,9 @@ footer {
     border-left-color: #ffc107;
 }
 
-.treatment-card.biological {
-    border-left-color: #17a2b8;
+.treatment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
 }
 
 /* Loading Spinner */
